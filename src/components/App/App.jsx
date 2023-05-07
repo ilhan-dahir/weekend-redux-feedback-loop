@@ -6,12 +6,16 @@ import { useEffect, useState } from 'react';
 
 function App() {
   const dispatch = useDispatch();
+  const feedback = useSelector((store) => store.feedback);
+
 
   useEffect(() => {
     getFeeback();
-  })
+  }, [])
 
   const getFeeback = () => {
+    event.preventDefault()
+
     axios({
       method: 'GET',
       url: '/feedback'
@@ -27,6 +31,7 @@ function App() {
         console.log('/app.js error', err);
       })
   }
+  console.log('FEEDBACK', feedback);
 
   return (
     <div className='App'>
