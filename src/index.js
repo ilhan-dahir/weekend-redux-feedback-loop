@@ -16,6 +16,14 @@ const feedback = (state = [], action) => {
 };
 
 const updatedFeedback = (state = [], action) => {
+    if (action.type === 'SET_FEELINGS') {
+        let newFeeling = action.payload;
+        console.log('state', [...state])
+        let updatedFeedback = [...state];
+        console.log('newFeeling>>', newFeeling)
+        updatedFeedback.push(newFeeling);
+        return updatedFeedback;
+    }
     return state;
 }
 
