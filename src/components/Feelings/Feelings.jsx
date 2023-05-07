@@ -1,10 +1,21 @@
 import React from "react";
+import './Feelings.css'
+import { HashRouter as Router, Route, Link } from "react-router-dom";
+import Button from '@material-ui/core/Button';
 
 function Feelings() {
     return (
         <>
-
-            <p>feelings</p>
+            <form>
+                <label>How are you feeling?:
+                    <input type="number" />
+                </label>
+            </form>
+            <Router>
+                <Button component={Link} to="/Understanding/">
+                    NEXT➡️
+                </Button>
+            </Router>
         </>
     )
 }
