@@ -15,11 +15,16 @@ const feedback = (state = [], action) => {
     return state;
 };
 
+const updatedFeedback = (state = [], action) => {
+    return state;
+}
+
 //Add Store:
 const feedbackStore = createStore(
     combineReducers({
         //reducers  
-        feedback
+        feedback,
+        updatedFeedback
 
     }),
     applyMiddleware(logger)
