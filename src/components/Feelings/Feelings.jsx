@@ -18,7 +18,6 @@ function Feelings() {
     const feelingsFeedback = () => {
         console.log('FEELINGS INPUT', feelingsInput)
         const feeling = Number(feelingsInput)
-
         dispatch({
             type: 'SET_FEELINGS',
             payload: feeling

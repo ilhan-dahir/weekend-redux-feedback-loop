@@ -50,11 +50,11 @@ function App() {
         <h4>Don't forget it!</h4>
       </header>
       <Router>
-        <Button component={Link} to="/Feelings/">
+        {/* <Button component={Link} to="/Feelings/">
           Start
-        </Button>
-        <Link to='/Feelings'></Link>
-        <Route exact path="/Feelings">
+        </Button> */}
+        <Link to='/'></Link>
+        <Route exact path="/">
           <h1>Feeling</h1>
           <Feelings />
         </Route>
