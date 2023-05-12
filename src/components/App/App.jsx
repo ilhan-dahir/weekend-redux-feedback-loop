@@ -7,7 +7,9 @@ import { useEffect, useState } from 'react';
 import Feelings from '../Feelings/Feelings';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
-import ConfirmSubmit from '../ConfirmSubmit/ConfirmSubmit';
+import Submit from '../Submit/Submit';
+import Review from '../Review/Review'
+import Comments from '../Comments/Comments';
 import Button from '@material-ui/core/Button';
 
 
@@ -66,10 +68,20 @@ function App() {
           <h1>Support</h1>
           <Support />
         </Route>
-        <Link to='/ConfirmSubmit'></Link>
-        <Route exact path="/ConfirmSubmit">
-          <h1>Confirm and Submit</h1>
-          <ConfirmSubmit />
+        <Link to='/Comment'></Link>
+        <Route exact path="/Comment">
+          <h1>Comments</h1>
+          <Comments />
+        </Route>
+        <Link to='/Review'></Link>
+        <Route exact path="/Review">
+          <h1>Review</h1>
+          <Review />
+        </Route>
+        <Link to='/Submit'></Link>
+        <Route exact path="/Submit">
+          <h1>Submit</h1>
+          <Submit />
         </Route>
 
       </Router>

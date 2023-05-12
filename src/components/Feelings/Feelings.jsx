@@ -2,7 +2,7 @@ import React from "react";
 import './Feelings.css'
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 import Button from '@material-ui/core/Button';
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useState } from "react";
 
 
@@ -17,9 +17,8 @@ function Feelings() {
 
     const feelingsFeedback = () => {
         console.log('FEELINGS INPUT', feelingsInput)
-        const feeling = {
-            Feeling: Number(feelingsInput)
-        };
+        const feeling = Number(feelingsInput)
+
         dispatch({
             type: 'SET_FEELINGS',
             payload: feeling
